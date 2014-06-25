@@ -32,9 +32,9 @@ server.on('after', cache.after);
 ### Cache Control ###
 Use of Restify's [res.cache()](http://mcavage.me/node-restify/#Response-API) method will control the [EXPIRE](http://redis.io/commands/expire) time in Redis.  The absence of a response cache will use the **cache.config.ttl** value identified above.
 
-Indicates that the response should be cached for 600 seconds.
+Indicates that the response should be cached for 600 seconds. (PUBLIC | PRIVATE | NO-CACHE | NO-STORE)
 ```
-res.cache('public', 600);
+res.cache('public', {maxAge: 600});
 ```
 
 A maxAge value of 0 will engage Redis, but set the expire seconds to 0 (essentially expiring immediately).
