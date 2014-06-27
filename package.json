@@ -1,6 +1,6 @@
 {
     "name": "elefrant-redis-cache",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Restify cache using Redis",
     "main": "index.js",
     "scripts": {
